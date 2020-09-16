@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import TopNavigation from "./components/navigation/TopNavigation";
+import styled from "styled-components";
+import Footer from "./components/navigation/Footer";
+
+const ApplicationBody = styled.div`
+  min-height: 55rem;
+  flex: 1;
+  background-color: orange;
+`;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopNavigation></TopNavigation>
+      <ApplicationBody></ApplicationBody>
+      <Footer>I am in the footer just so you know</Footer>
     </div>
   );
 }
