@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Footer from "./navigation/Footer";
 import photo from "../assets/photos/rome-bridge.jpg";
 
-import { ReactComponent as BrooklynBridge } from "../assets/photos/brooklyn-bridge.svg";
+// import { ReactComponent as BrooklynBridge } from "../assets/photos/brooklyn-bridge.svg";
 
 const ApplicationBody = styled.div`
   min-height: 55rem;
@@ -27,9 +27,7 @@ function Home() {
   return (
     <div className="Home">
       {/* <WelcomeImage src={photo} /> */}
-      <WelcomeImage>
-        <BrooklynBridge />
-      </WelcomeImage>
+      <WelcomeImage></WelcomeImage>
       <TopNavigation></TopNavigation>
       <ApplicationBody></ApplicationBody>
       <Footer>I am in the footer just so you know</Footer>
