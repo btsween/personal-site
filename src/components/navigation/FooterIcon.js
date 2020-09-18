@@ -5,7 +5,8 @@ const IconWrapper = styled.div`
   display: flex;
   height: 1.5rem;
   width: 1.5rem;
-  background-color: green;
+  margin-left: 1rem;
+  margin-right: 1rem;
 `;
 
 function FooterIcon(icon) {

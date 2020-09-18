@@ -3,28 +3,47 @@ import styled from "styled-components";
 import { ReactComponent as GithubIcon } from "../../assets/icons/github-icon.svg";
 // import LinkedinIcon from "../../assets/icons/linkedin-icon.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedin-icon.svg";
+import cantinaIcon from "../../assets/icons/cantina-icon.png";
 
 import IconDerp from "./FooterIcon";
 
 const FooterIcon = styled.div`
-  height: 1.5rem;
-  width: 1.5rem;
-  object-fit: contain;
+  height: 2.5rem;
+  width: 2.5rem;
+  object-fit: cover;
+  margin-right: 1rem;
+  margin-left: 1rem;
 `;
 
 const FooterWrapper = styled.div`
-  height: 5rem;
+  min-height: 5rem;
   display: flex;
   flex-direction: column;
+  background-color: #f7f9fb;
+  color: #58646d;
+  justify-content: center;
+  align-items: center;
 `;
 
-const ContentRow = styled.div``;
+const CustomImage = styled.img`
+  height: 2.5rem;
+  width: 2.5rem;
+  object-fit: cover;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  border-radius: 4px;
+`;
+
+const ContentRow = styled.div`
+  display: flex;
+  margin: 1rem;
+`;
 
 function Footer() {
   return (
     <FooterWrapper>
       <ContentRow>
-        <span>I am going to be a setnece or chain of copyrights?</span>
+        <span>Bryan Sweeney, Software Engineer 2020</span>
       </ContentRow>
       <ContentRow>
         <FooterIcon>
@@ -33,7 +52,9 @@ function Footer() {
         <FooterIcon>
           <GithubIcon />
         </FooterIcon>
-        <IconDerp icon={<GithubIcon />} />
+        <FooterIcon>
+          <CustomImage src={cantinaIcon} />
+        </FooterIcon>
       </ContentRow>
     </FooterWrapper>
   );
