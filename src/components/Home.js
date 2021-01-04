@@ -11,12 +11,14 @@ const PageBody = styled.div`
 
 function Home() {
   return (
-    <PageBody>
-      <ContentCard />
-      <ContentCard />
-      <ContentCard />
-      <ContentCard />
-    </PageBody>
+    <div>
+      <TopNavigation />
+      <PageBody>
+        <ContentCard />
+        <ContentCard />
+      </PageBody>
+      <Footer />
+    </div>
   );
 }
 

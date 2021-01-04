@@ -3,16 +3,16 @@ import styled from "styled-components";
 
 const TopNavWrapper = styled.div`
   display: flex;
-  height: 5.5rem;
+  min-height: 5.5rem;
   width: 100%;
-  background-color: #f7f9fb;
-  color: #58646d;
-  justify-content: space-between;
+  justify-content: space-around;
+  color: #05386b;
+  border-bottom: solid 1px #05386b;
 `;
 
 const HeaderLeft = styled.div`
-  margin-left: 2rem;
-  font-size 36px;
+  margin-left: 5rem;
+  font-size 48px;
   margin-top: auto;
   margin-bottom: auto;
 `;
@@ -20,14 +20,13 @@ const HeaderLeft = styled.div`
 const HeaderRight = styled.div`
   margin-top: auto;
   margin-bottom: auto;
-  font-size: 24px;
+  font-size: 26px;
   display: flex;
-  margin-right: 0.5rem;
 `;
 
 const HeaderTab = styled.div`
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 `;
 
 function TopNavigation() {

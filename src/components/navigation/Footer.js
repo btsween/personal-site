@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as GithubIcon } from "../../assets/icons/github-icon.svg";
-// import LinkedinIcon from "../../assets/icons/linkedin-icon.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedin-icon.svg";
 import cantinaIcon from "../../assets/icons/cantina-icon.png";
-
-import IconDerp from "./FooterIcon";
 
 const FooterIcon = styled.div`
   height: 2.5rem;
@@ -19,8 +16,6 @@ const FooterWrapper = styled.div`
   min-height: 5rem;
   display: flex;
   flex-direction: column;
-  background-color: #f7f9fb;
-  color: #58646d;
   justify-content: center;
   align-items: center;
 `;

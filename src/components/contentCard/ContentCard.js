@@ -2,47 +2,92 @@ import React from "react";
 import styled from "styled-components";
 
 const CardWrapper = styled.div`
-  width: 90%;
-  height: 25rem;
-  background-color: #f7f9fb;
-  color: #58646d;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 9px;
   display: flex;
   flex-direction: column;
+`;
+
+const CardWrapperBlue = styled(CardWrapper)`
+  background-color: {"#ffffff"};
+`;
+
+const CardWrapperOrange = styled(CardWrapper)`
+  background-color: orange;
+`;
+
+const CardWrapperGreen = styled(CardWrapper)`
+  background-color: green;
 `;
 
 const CardHeader = styled.div`
   min-height: 2rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   font-size: 30px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 `;
 
 const HeaderLeft = styled.div`
-  color: #58646d;
   margin-left: 1rem;
-  margin-top: auto;
-  margin-bottom: auto;
 `;
 
 const HeaderRight = styled.div`
-  color: #58646d;
   margin-left: 1rem;
   margin-top: auto;
   margin-bottom: auto;
+  margin-right: 1rem;
 `;
 
+const HeaderCenter = styled.div`
+  margin-left: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 1rem;
+`;
+
+const CardBody = styled.div`
+  padding: 1rem;
+  display: flex;
+`;
+
+const BodyText = styled.div``;
+
+const BottomWrapper = styled.div`
+  display: flex;
+  background-color: orange;
+  justify-content: center;
+`;
+
+const InnerContainer = styled.div`
+  height: 10rem;
+  width: 20rem;
+  margin: 2rem;
+  background-color: white;
+`;
+
+/**
+ * Current idea will be that ContentCard(s) will be used on both Experience and Portfolio pages and source content from the yml files.
+ * In order to determine what content to source, will need to take params indicating the page.
+ */
 function ContentCard() {
   return (
     <CardWrapper>
       <CardHeader>
-        <HeaderLeft>Software Engineer, Cantina Consulting</HeaderLeft>
-        <HeaderRight>April 2020 - Present</HeaderRight>
+        <HeaderCenter>Software Engineer, Cantina Consulting</HeaderCenter>
       </CardHeader>
+      <CardBody>
+        <BodyText>
+          Saved client 100k+/year by creating an in-house replacement for a
+          vender product.
+        </BodyText>
+      </CardBody>
+      <BottomWrapper>
+        <InnerContainer>
+        </InnerContainer>
+        <InnerContainer>
+        </InnerContainer>
+      </BottomWrapper>
     </CardWrapper>
   );
 }
