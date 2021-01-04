@@ -1,19 +1,10 @@
 import React, { useState } from "react";
-const InterestForm = ({
-  onChangeInitialAmount,
-  onChangeMonthlyAmount,
-  onChangeTimeInvested,
-  onChangeReturnRate,
-  initialAmount,
-  monthlyAmount,
-  timeInvested,
-  returnRate,
-}) => {
-  // const InterestForm = () => {
-  //   const [initialAmount, setInitialAmount] = useState("1000");
-  //   const [monthlyAmount, setMonthlyAmount] = useState("500");
-  //   const [timeInvested, setTimeInvested] = useState("45");
-  //   const [returnRate, setReturnRate] = useState("8");
+
+const InterestForm = ({ onSetChartData }) => {
+  const [initialAmount, setInitialAmount] = useState("1000");
+  const [monthlyAmount, setMonthlyAmount] = useState("500");
+  const [timeInvested, setTimeInvested] = useState("45");
+  const [returnRate, setReturnRate] = useState("8");
   const [formsValid, setFormsValid] = useState({
     INITIAL: true,
     MONTLY: true,
@@ -26,7 +17,10 @@ const InterestForm = ({
     let validForm = !Object.values(formsValid).includes(false);
 
     if (validForm) {
+      // call a function to actually generate data for our chart..
+      onSetChartData([100, 100, 100, 100]);
     } else {
+      // send an error ?
     }
   };
 
@@ -89,7 +83,7 @@ const InterestForm = ({
         type="text"
         value={initialAmount}
         required
-        onChange={(e) => onChangeInitialAmount(e.target.value)}
+        onChange={(e) => setInitialAmount(e.target.value)}
         onBlur={(e) => handleBlur(e.target.value, "INITIAL")}
       />
       <label>Amount per Month</label>
@@ -97,7 +91,7 @@ const InterestForm = ({
         type="text"
         value={monthlyAmount}
         required
-        onChange={(e) => onChangeMonthlyAmount(e.target.value)}
+        onChange={(e) => setMonthlyAmount(e.target.value)}
         onBlur={(e) => handleBlur(e.target.value, "MONTHLY")}
       />
       <label>Time Invested</label>
@@ -105,7 +99,7 @@ const InterestForm = ({
         type="text"
         value={timeInvested}
         required
-        onChange={(e) => onChangeTimeInvested(e.target.value)}
+        onChange={(e) => setTimeInvested(e.target.value)}
         onBlur={(e) => handleBlur(e.target.value, "TIME")}
       />
       <label>Rate of Return</label>
@@ -113,7 +107,7 @@ const InterestForm = ({
         type="text"
         value={returnRate}
         required
-        onChange={(e) => onChangeReturnRate(e.target.value)}
+        onChange={(e) => setReturnRate(e.target.value)}
         onBlur={(e) => handleBlur(e.target.value, "RATE")}
       />
       <input type="submit" value="submit form" />
