@@ -1,24 +1,32 @@
 import React, { useState } from "react";
-
-const InterestForm = () => {
-  const [initialAmount, setInitialAmount] = useState("1000");
-  const [monthlyAmount, setMonthlyAmount] = useState("500");
-  const [timeInvested, setTimeInvested] = useState("45");
-  const [returnRate, setReturnRate] = useState("8");
+const InterestForm = ({
+  onChangeInitialAmount,
+  onChangeMonthlyAmount,
+  onChangeTimeInvested,
+  onChangeReturnRate,
+  initialAmount,
+  monthlyAmount,
+  timeInvested,
+  returnRate,
+}) => {
+  // const InterestForm = () => {
+  //   const [initialAmount, setInitialAmount] = useState("1000");
+  //   const [monthlyAmount, setMonthlyAmount] = useState("500");
+  //   const [timeInvested, setTimeInvested] = useState("45");
+  //   const [returnRate, setReturnRate] = useState("8");
   const [formsValid, setFormsValid] = useState({
     INITIAL: true,
     MONTLY: true,
     TIME: true,
     RATE: true,
   });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // let a = Object.keys(formsValid).values.contains(false);
     let validForm = !Object.values(formsValid).includes(false);
+
     if (validForm) {
-      console.log("would proceed");
     } else {
-      console.log("would stop..");
     }
   };
 
@@ -81,7 +89,7 @@ const InterestForm = () => {
         type="text"
         value={initialAmount}
         required
-        onChange={(e) => setInitialAmount(e.target.value)}
+        onChange={(e) => onChangeInitialAmount(e.target.value)}
         onBlur={(e) => handleBlur(e.target.value, "INITIAL")}
       />
       <label>Amount per Month</label>
@@ -89,7 +97,7 @@ const InterestForm = () => {
         type="text"
         value={monthlyAmount}
         required
-        onChange={(e) => setMonthlyAmount(e.target.value)}
+        onChange={(e) => onChangeMonthlyAmount(e.target.value)}
         onBlur={(e) => handleBlur(e.target.value, "MONTHLY")}
       />
       <label>Time Invested</label>
@@ -97,7 +105,7 @@ const InterestForm = () => {
         type="text"
         value={timeInvested}
         required
-        onChange={(e) => setTimeInvested(e.target.value)}
+        onChange={(e) => onChangeTimeInvested(e.target.value)}
         onBlur={(e) => handleBlur(e.target.value, "TIME")}
       />
       <label>Rate of Return</label>
@@ -105,7 +113,7 @@ const InterestForm = () => {
         type="text"
         value={returnRate}
         required
-        onChange={(e) => setReturnRate(e.target.value)}
+        onChange={(e) => onChangeReturnRate(e.target.value)}
         onBlur={(e) => handleBlur(e.target.value, "RATE")}
       />
       <input type="submit" value="submit form" />
