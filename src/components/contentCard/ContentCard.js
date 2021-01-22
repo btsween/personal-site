@@ -6,18 +6,6 @@ const CardWrapper = styled.div`
   flex-direction: column;
 `;
 
-const CardWrapperBlue = styled(CardWrapper)`
-  background-color: {"#ffffff"};
-`;
-
-const CardWrapperOrange = styled(CardWrapper)`
-  background-color: orange;
-`;
-
-const CardWrapperGreen = styled(CardWrapper)`
-  background-color: green;
-`;
-
 const CardHeader = styled.div`
   min-height: 2rem;
   display: flex;
@@ -55,7 +43,6 @@ const BodyText = styled.div``;
 
 const BottomWrapper = styled.div`
   display: flex;
-  background-color: orange;
   justify-content: center;
 `;
 
@@ -82,12 +69,7 @@ function ContentCard() {
           vender product.
         </BodyText>
       </CardBody>
-      <BottomWrapper>
-        <InnerContainer>
-        </InnerContainer>
-        <InnerContainer>
-        </InnerContainer>
-      </BottomWrapper>
+      <InnerContainer></InnerContainer>
     </CardWrapper>
   );
 }
