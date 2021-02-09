@@ -23,13 +23,11 @@ const CardBody = styled.div`
   flex-direction: column;
   border-radius: 9px;
   box-shadow: 0 0.5px 2px 0 rgba(0, 0, 0, 0.2);
-  // max-width: 65vw;
-`;
-
-const BodyText = styled.div`
   width: 50rem;
   max-width: 75vw;
 `;
+
+const BodyText = styled.div``;
 
 /**
  * Current idea will be that ContentCard(s) will be used on both Experience and Portfolio pages and source content from the yml files.
