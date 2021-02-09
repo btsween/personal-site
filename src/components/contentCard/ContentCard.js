@@ -13,6 +13,8 @@ const CardHeader = styled.div`
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  justify-content: center;
 `;
 
 const CardBody = styled.div`
@@ -27,7 +29,9 @@ const CardBody = styled.div`
   max-width: 75vw;
 `;
 
-const BodyText = styled.div``;
+const BodyText = styled.div`
+  text-align: center;
+`;
 
 /**
  * Current idea will be that ContentCard(s) will be used on both Experience and Portfolio pages and source content from the yml files.
@@ -37,15 +41,11 @@ function ContentCard() {
   return (
     <CardWrapper>
       <CardBody>
-        <CardHeader>Project 1</CardHeader>
+        <CardHeader>Bluetooth Beacon Navigator</CardHeader>
         <BodyText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Bluetooth equipped mobile app that allows a user to better understand
+          a venue by using multiple bluetooth beacons showing the user the
+          relative distance to different beacon landmarks.
         </BodyText>
       </CardBody>
     </CardWrapper>

@@ -6,7 +6,6 @@ const TopNavWrapper = styled.div`
   min-height: 5.5rem;
   width: 100%;
   justify-content: space-between;
-  font-family: Open Sans, sans-serif;
   color: rgb(238, 238, 238);
   background-color: rgb(35, 48, 68);
 `;
