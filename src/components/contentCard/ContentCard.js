@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Picture from "../../assets/photos/picture.png";
+import SlideShow from "./SlideShow";
 
 const CardWrapper = styled.div`
   display: flex;
@@ -31,6 +33,19 @@ const CardBody = styled.div`
 
 const BodyText = styled.div`
   text-align: center;
+  font-size: 18px;
+`;
+
+const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 3px;
+`;
+
+const ImageCust = styled.img`
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
 `;
 
 /**
@@ -38,10 +53,17 @@ const BodyText = styled.div`
  * In order to determine what content to source, will need to take params indicating the page.
  */
 function ContentCard() {
+  // const [fruits, setFruits] = React.useState([
+  //   { id: "1", src: , isActive: false },
+  //   { id: "2", name: "Peach", Active:: true },
+  //   { id: "3", name: "Strawberry", isActive: false },
+  // ]);
+
   return (
     <CardWrapper>
       <CardBody>
         <CardHeader>Bluetooth Beacon Navigator</CardHeader>
+        <SlideShow></SlideShow>
         <BodyText>
           Bluetooth equipped mobile app that allows a user to better understand
           a venue by using multiple bluetooth beacons showing the user the
