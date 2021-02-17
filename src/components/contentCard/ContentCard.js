@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Picture from "../../assets/photos/picture.png";
 import SlideShow from "./SlideShow";
 
 const CardWrapper = styled.div`
@@ -34,18 +33,6 @@ const CardBody = styled.div`
 const BodyText = styled.div`
   text-align: center;
   font-size: 18px;
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 3px;
-`;
-
-const ImageCust = styled.img`
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-content: center;
 `;
 
 /**
