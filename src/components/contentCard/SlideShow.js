@@ -24,24 +24,30 @@ function SlideShow() {
   const initialState = [];
   images.map((image, index) =>
     initialState.push({
-      id: index,
+      idx: index,
       src: image,
       isActive: index === 0 ? true : false,
+      count: 0,
     })
   );
   const [imageInfo, setImageInfo] = React.useState(initialState);
   const [currentActive, setCurrentActive] = React.useState(0);
 
   const bClick = () => {
-    setCurrentActive(currentActive + 1);
+    setCurrentActive((currentActive) => currentActive + 1);
   };
 
   useEffect(() => {
-    const info = imageInfo;
-    console.log("ok...", currentActive);
-    info[currentActive].isActive = true;
-    setImageInfo(info);
+    setImageInfo((imageInfo) => {
+      const infoCopy = [...imageInfo];
+      infoCopy[currentActive].isActive = true;
+      return infoCopy;
+    });
   }, [currentActive]);
+
+  useEffect(() => {
+    console.log(imageInfo);
+  }, [imageInfo]);
 
   return (
     <ImageWrapper>
@@ -50,9 +56,8 @@ function SlideShow() {
           <ImageCust
             key={index}
             src={image}
-            // className={(index, imageInfo[index].isActive ? "active" : "")}
-            className={"hi" + index}
-          ></ImageCust>
+            className={imageInfo[index].isActive ? "active" : ""}
+          />
         );
       })}
       <button onClick={bClick}>click me</button>
