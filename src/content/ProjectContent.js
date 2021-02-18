@@ -26,5 +26,31 @@ module.exports = {
         },
       ],
     },
+    {
+      name: "Market Watcher",
+      description:
+        "Tracks the s/p 500 to look for stocks that are priced unusally, and sends texts to the subscriber to notify of potential buys.",
+      assets: [
+        {
+          type: "photo",
+          path: "photos/picture.png",
+        },
+        {
+          type: "video",
+          path: "photos/video.mov",
+        },
+      ],
+    },
+    {
+      name: "Compound Interest Calculator",
+      description:
+        "Calculates and graphs the value of a portfolio according to user provided parameters such as time, RoR, and incremental montly investments.",
+      assets: [
+        {
+          type: "photo",
+          path: "photos/picture.png",
+        },
+      ],
+    },
   ],
 };
