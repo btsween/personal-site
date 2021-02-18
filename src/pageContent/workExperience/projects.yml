@@ -1,0 +1,11 @@
+projects:
+  - bluetooth:
+      name: "Bluetooth Beacon Map"
+      description: "Bluetooth equipped mobile app that allows a user to better understand a venue by using multiple bluetooth beacons showing the user the relative distance to different beacon landmarks"
+      assets:
+        - a1:
+            type: "photo"
+            path: "/assets/photos/picture"
+        - a2:
+            type: "video"
+            path: "/assets/photos/recording_demo.mov"

@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import Picture from "../../assets/photos/picture.png";
+import Video from "../../assets/photos/recording_demo.mov";
 import RightIcon from "../../assets/icons/chevron-right.svg";
 import LeftIcon from "../../assets/icons/chevron-left.svg";
+
+const assetPathRoot = "../../assets/";
 
 const ImageWrapper = styled.div`
   display: flex;
@@ -10,7 +13,7 @@ const ImageWrapper = styled.div`
   margin: 3px;
 `;
 
-const ImageCust = styled.img`
+const StyledImage = styled.img`
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
@@ -44,7 +47,15 @@ const NavigationContainer = styled.div`
   justify-content: center;
 `;
 
-function SlideShow() {
+const StyledVideo = styled.video`
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+`;
+
+function SlideShow(props) {
   const images = [Picture, Picture, Picture];
   const initialState = [];
   images.map((image, index) =>
@@ -72,6 +83,11 @@ function SlideShow() {
   };
   const nextRight = () => {
     if (currentActive !== imageInfo.length - 1) {
+      setImageInfo((imageInfo) => {
+        const infoCopy = [...imageInfo];
+        infoCopy[currentActive].isActive = false;
+        return infoCopy;
+      });
       setCurrentActive((currentActive) => currentActive + 1);
     } else {
       // TODO: show effect for no further images or only show when useful
@@ -89,7 +105,23 @@ function SlideShow() {
   return (
     <Carousel>
       <ImageWrapper>
-        {images.map((image, index) => {
+        {props.assets.map((asset, index) => {
+          return asset.type === "photo" ? (
+            <StyledImage
+              key={index}
+              src={Picture}
+              className={imageInfo[index].isActive ? "active" : ""}
+            />
+          ) : (
+            <StyledVideo
+              key={index}
+              src={Video}
+              format="video/mov"
+              className={imageInfo[index].isActive ? "active" : ""}
+            />
+          );
+        })}
+        {/* {images.map((image, index) => {
           return (
             <ImageCust
               key={index}
@@ -97,13 +129,13 @@ function SlideShow() {
               className={imageInfo[index].isActive ? "active" : ""}
             />
           );
-        })}
+        })} */}
       </ImageWrapper>
       <NavigationContainer>
-        <Button onClick={() => nextLeft}>
+        <Button onClick={nextLeft}>
           <LeftButton src={LeftIcon}></LeftButton>
         </Button>
-        <Button onClick={() => nextRight}>
+        <Button onClick={nextRight}>
           <LeftButton src={RightIcon}></LeftButton>
         </Button>
       </NavigationContainer>

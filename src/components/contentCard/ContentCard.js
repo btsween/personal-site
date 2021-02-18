@@ -39,23 +39,13 @@ const BodyText = styled.div`
  * Current idea will be that ContentCard(s) will be used on both Experience and Portfolio pages and source content from the yml files.
  * In order to determine what content to source, will need to take params indicating the page.
  */
-function ContentCard() {
-  // const [fruits, setFruits] = React.useState([
-  //   { id: "1", src: , isActive: false },
-  //   { id: "2", name: "Peach", Active:: true },
-  //   { id: "3", name: "Strawberry", isActive: false },
-  // ]);
-
+function ContentCard(props) {
   return (
     <CardWrapper>
+      <CardHeader>{props.projectData.name}</CardHeader>
       <CardBody>
-        <CardHeader>Bluetooth Beacon Navigator</CardHeader>
-        <SlideShow></SlideShow>
-        <BodyText>
-          Bluetooth equipped mobile app that allows a user to better understand
-          a venue by using multiple bluetooth beacons showing the user the
-          relative distance to different beacon landmarks.
-        </BodyText>
+        <SlideShow assets={props.projectData.assets} />
+        <BodyText>{props.name}</BodyText>
       </CardBody>
     </CardWrapper>
   );
