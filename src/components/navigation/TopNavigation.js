@@ -5,9 +5,9 @@ const TopNavWrapper = styled.div`
   display: flex;
   min-height: 5.5rem;
   width: 100%;
-  justify-content: space-around;
-  color: #05386b;
-  border-bottom: solid 1px #05386b;
+  justify-content: space-between;
+  color: rgb(238, 238, 238);
+  background-color: rgb(35, 48, 68);
 `;
 
 const HeaderLeft = styled.div`
@@ -34,7 +34,6 @@ function TopNavigation() {
     <TopNavWrapper>
       <HeaderLeft>Bryan Sweeney</HeaderLeft>
       <HeaderRight>
-        <HeaderTab>Experience</HeaderTab>
         <HeaderTab>Projects</HeaderTab>
         <HeaderTab>About</HeaderTab>
       </HeaderRight>

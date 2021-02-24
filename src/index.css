@@ -8,4 +8,5 @@
 #root {
   min-height: 100vh;
   display: flex;
+  font-family: Open Sans, sans-serif;
 }
