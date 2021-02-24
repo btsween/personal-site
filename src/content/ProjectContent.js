@@ -11,7 +11,7 @@ module.exports = {
         },
         {
           type: "video",
-          path: "photos/video.mov",
+          path: "photos/vid.mp4",
         },
       ],
     },
@@ -34,10 +34,6 @@ module.exports = {
         {
           type: "photo",
           path: "photos/picture.png",
-        },
-        {
-          type: "video",
-          path: "photos/video.mov",
         },
       ],
     },

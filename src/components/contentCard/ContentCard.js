@@ -10,7 +10,7 @@ const CardWrapper = styled.div`
 
 const CardHeader = styled.div`
   min-height: 2rem;
-  font-size: 30px;
+  font-size: 35px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-color: rgba(0, 0, 0, 0.87);
@@ -32,7 +32,8 @@ const CardBody = styled.div`
 
 const BodyText = styled.div`
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
+  padding-top: 0.75rem;
 `;
 
 /**
@@ -42,10 +43,10 @@ const BodyText = styled.div`
 function ContentCard(props) {
   return (
     <CardWrapper>
-      <CardHeader>{props.projectData.name}</CardHeader>
       <CardBody>
+        <CardHeader>{props.projectData.name}</CardHeader>
         <SlideShow assets={props.projectData.assets} />
-        <BodyText>{props.name}</BodyText>
+        <BodyText>{props.projectData.description}</BodyText>
       </CardBody>
     </CardWrapper>
   );
