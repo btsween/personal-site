@@ -99,7 +99,7 @@ function SlideShow(props) {
   };
 
   const handleRightArrowClick = () => {
-    if (currentActive < imageInfo.length - 2) {
+    if (currentActive < imageInfo.length - 1) {
       setImageInfo((imageInfo) => {
         const infoCopy = [...imageInfo];
         infoCopy[currentActive].isActive = false;
