@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Picture from "../../assets/photos/picture.png";
-import Video from "../../assets/photos/vid.mp4";
-import RightIcon from "../../assets/icons/chevron-right.svg";
-import LeftIcon from "../../assets/icons/chevron-left.svg";
+import RightChevron from "../../assets/icons/chevron-right.svg";
+import LeftChevron from "../../assets/icons/chevron-left.svg";
+import Photos from "../../assets/photos/Photos";
 
 const ImageWrapper = styled.div`
   display: flex;
@@ -77,14 +76,12 @@ const ImageDot = styled.button`
 `;
 
 function SlideShow(props) {
-  const images = [Picture, Picture, Picture];
+  console.log(props);
   const initialState = [];
-  images.map((image, index) =>
+  props.assets.map((asset, index) =>
     initialState.push({
       idx: index,
-      src: image,
       isActive: index === 0 ? true : false,
-      count: 0,
     })
   );
   const [imageInfo, setImageInfo] = React.useState(initialState);
@@ -98,8 +95,6 @@ function SlideShow(props) {
         return infoCopy;
       });
       setCurrentActive((currentActive) => currentActive - 1);
-    } else {
-      // TODO: show effect for no further images or only show when useful
     }
   };
 
@@ -111,8 +106,6 @@ function SlideShow(props) {
         return infoCopy;
       });
       setCurrentActive((currentActive) => currentActive + 1);
-    } else {
-      // TODO: show effect for no further images or only show when useful
     }
   };
 
@@ -137,18 +130,18 @@ function SlideShow(props) {
 
   return (
     <Carousel>
-      <ImageWrapper className="image-wrapper">
+      <ImageWrapper className="imageWrapper">
         {props.assets.map((asset, index) => {
           return asset.type === "photo" ? (
             <StyledImage
               key={index}
-              src={Picture}
+              src={Photos[asset.name]}
               className={imageInfo[index].isActive ? "active" : ""}
             />
           ) : (
             <StyledVideo
               key={index}
-              src={Video}
+              src={Photos[asset.name]}
               controls
               autoplay
               format="video/mp4"
@@ -159,7 +152,7 @@ function SlideShow(props) {
       </ImageWrapper>
       <NavigationContainer>
         <Button onClick={handleLeftArrowClick}>
-          <Chevron src={LeftIcon}></Chevron>
+          <Chevron src={LeftChevron}></Chevron>
         </Button>
         {props.assets.map((asset, index) => {
           return (
@@ -172,7 +165,7 @@ function SlideShow(props) {
           );
         })}
         <Button onClick={handleRightArrowClick}>
-          <Chevron src={RightIcon}></Chevron>
+          <Chevron src={RightChevron}></Chevron>
         </Button>
       </NavigationContainer>
     </Carousel>

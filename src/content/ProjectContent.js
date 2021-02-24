@@ -7,11 +7,11 @@ module.exports = {
       assets: [
         {
           type: "photo",
-          path: "photos/picture.png",
+          name: "pic",
         },
         {
           type: "video",
-          path: "photos/vid.mp4",
+          name: "vid",
         },
       ],
     },
@@ -22,7 +22,7 @@ module.exports = {
       assets: [
         {
           type: "photo",
-          path: "photos/picture.png",
+          name: "pic",
         },
       ],
     },
@@ -33,7 +33,7 @@ module.exports = {
       assets: [
         {
           type: "photo",
-          path: "photos/picture.png",
+          name: "pic",
         },
       ],
     },
@@ -44,7 +44,7 @@ module.exports = {
       assets: [
         {
           type: "photo",
-          path: "photos/picture.png",
+          name: "pic",
         },
       ],
     },
