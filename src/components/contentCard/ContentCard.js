@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SlideShow from "./SlideShow";
 
 const CardWrapper = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const CardWrapper = styled.div`
 
 const CardHeader = styled.div`
   min-height: 2rem;
-  font-size: 30px;
+  font-size: 35px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-color: rgba(0, 0, 0, 0.87);
@@ -31,22 +32,21 @@ const CardBody = styled.div`
 
 const BodyText = styled.div`
   text-align: center;
+  font-size: 20px;
+  padding-top: 0.75rem;
 `;
 
 /**
  * Current idea will be that ContentCard(s) will be used on both Experience and Portfolio pages and source content from the yml files.
  * In order to determine what content to source, will need to take params indicating the page.
  */
-function ContentCard() {
+function ContentCard(props) {
   return (
     <CardWrapper>
       <CardBody>
-        <CardHeader>Bluetooth Beacon Navigator</CardHeader>
-        <BodyText>
-          Bluetooth equipped mobile app that allows a user to better understand
-          a venue by using multiple bluetooth beacons showing the user the
-          relative distance to different beacon landmarks.
-        </BodyText>
+        <CardHeader>{props.projectData.name}</CardHeader>
+        <SlideShow assets={props.projectData.assets} />
+        <BodyText>{props.projectData.description}</BodyText>
       </CardBody>
     </CardWrapper>
   );

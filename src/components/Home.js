@@ -2,7 +2,7 @@ import React from "react";
 import TopNavigation from "./navigation/TopNavigation";
 import styled from "styled-components";
 import Footer from "./navigation/Footer";
-
+import PageContent from "../content/ProjectContent";
 import ContentCard from "./contentCard/ContentCard";
 
 const PageBody = styled.div`
@@ -14,8 +14,9 @@ function Home() {
     <div>
       <TopNavigation />
       <PageBody>
-        <ContentCard />
-        <ContentCard />
+        {PageContent.projects.map((project, index) => {
+          return <ContentCard projectData={project} />;
+        })}
       </PageBody>
       <Footer />
     </div>
