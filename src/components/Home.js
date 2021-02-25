@@ -9,17 +9,21 @@ const PageBody = styled.div`
   flex: 1;
 `;
 
+const HomeWrapper = styled.div`
+  flex: 1;
+`;
+
 function Home() {
   return (
-    <div>
+    <HomeWrapper className="temp">
       <TopNavigation />
       <PageBody>
-        {PageContent.projects.map((project, index) => {
+        {PageContent.projects.map((project) => {
           return <ContentCard projectData={project} />;
         })}
       </PageBody>
       <Footer />
-    </div>
+    </HomeWrapper>
   );
 }
 
