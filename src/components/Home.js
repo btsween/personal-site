@@ -15,9 +15,9 @@ const HomeWrapper = styled.div`
 
 function Home() {
   return (
-    <HomeWrapper className="temp">
+    <HomeWrapper>
       <TopNavigation />
-      <PageBody>
+      <PageBody className="temp">
         {PageContent.projects.map((project) => {
           return <ContentCard projectData={project} />;
         })}

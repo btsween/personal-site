@@ -7,7 +7,6 @@ import Photos from "../../assets/photos/Photos";
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 3px;
   min-height: 34rem;
 `;
 
@@ -21,6 +20,7 @@ const StyledImage = styled.img`
 
   &.active {
     display: flex;
+    min-height: auto;
   }
 `;
 
