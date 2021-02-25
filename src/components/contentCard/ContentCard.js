@@ -6,6 +6,10 @@ const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 2rem;
+
+  @media (max-width: 650px) {
+    padding: 1rem;
+  }
 `;
 
 const CardHeader = styled.div`
@@ -16,6 +20,7 @@ const CardHeader = styled.div`
   font-color: rgba(0, 0, 0, 0.87);
   display: flex;
   justify-content: center;
+  text-align: center;
 `;
 
 const CardBody = styled.div`
@@ -28,6 +33,12 @@ const CardBody = styled.div`
   box-shadow: 0 0.5px 2px 0 rgba(0, 0, 0, 0.2);
   width: 50rem;
   max-width: 75vw;
+
+  @media (max-width: 650px) {
+    max-width: inherit;
+    width: inherit;
+    padding: 5px;
+  }
 `;
 
 const BodyText = styled.div`
