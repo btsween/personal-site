@@ -5,15 +5,12 @@ import SlideShow from "./SlideShow";
 const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-top: solid 2px #86abb4;
 
   &.dark-schemed {
     background-color: #e8e8e8;
-  }
-
-  @media (max-width: 650px) {
-    padding: 1rem;
   }
 `;
 
@@ -36,7 +33,6 @@ const CardBody = styled.div`
   @media (max-width: 650px) {
     max-width: inherit;
     width: inherit;
-    padding: 5px;
   }
 `;
 

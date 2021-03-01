@@ -35,12 +35,24 @@ const Chevron = styled.img`
   width: 2.5rem;
 `;
 
-const ButtonWrapper = styled.div`
-  display: flex;
+const ButtonWrapperDesktop = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 4rem;
+  display: none;
+
+  @media (min-width: 650px) {
+    display: flex;
+  }
+`;
+
+const ButtonWrapperMobile = styled.div`
+  display: none;
+
+  @media (max-width: 650px) {
+    display: flex;
+  }
 `;
 
 const Button = styled.button`
@@ -143,11 +155,11 @@ function SlideShow(props) {
   return (
     <Carousel>
       <ImageWrapper className="imageWrapper">
-        <ButtonWrapper>
+        <ButtonWrapperDesktop>
           <Button onClick={handleLeftArrowClick}>
             <Chevron src={LeftChevron}></Chevron>
           </Button>
-        </ButtonWrapper>
+        </ButtonWrapperDesktop>
         {props.assets.map((asset, index) => {
           return asset.type === "photo" ? (
             <StyledImage
@@ -166,13 +178,18 @@ function SlideShow(props) {
             />
           );
         })}
-        <ButtonWrapper>
+        <ButtonWrapperDesktop>
           <Button onClick={handleRightArrowClick}>
             <Chevron src={RightChevron}></Chevron>
           </Button>
-        </ButtonWrapper>
+        </ButtonWrapperDesktop>
       </ImageWrapper>
       <NavigationContainer>
+        <ButtonWrapperMobile>
+          <Button onClick={handleLeftArrowClick}>
+            <Chevron src={LeftChevron}></Chevron>
+          </Button>
+        </ButtonWrapperMobile>
         {props.assets.map((asset, index) => {
           return (
             <ImageDot
@@ -183,6 +200,11 @@ function SlideShow(props) {
             />
           );
         })}
+        <ButtonWrapperMobile>
+          <Button onClick={handleRightArrowClick}>
+            <Chevron src={RightChevron}></Chevron>
+          </Button>
+        </ButtonWrapperMobile>
       </NavigationContainer>
     </Carousel>
   );
