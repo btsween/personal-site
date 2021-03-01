@@ -31,15 +31,19 @@ const Carousel = styled.div`
 
 const Chevron = styled.img`
   background-size: cover;
-  height: 2rem;
-  width: 2rem;
+  height: 2.5rem;
+  width: 2.5rem;
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem;
 `;
 
 const Button = styled.button`
-  box-shadow: 0px 0px 0px transparent;
-  border: 0px solid transparent;
-  text-shadow: 0px 0px 0px transparent;
-  background-color: rgba(71, 130, 218, 0.05);
   display: flex;
   border-radius: 5px;
 
@@ -53,7 +57,6 @@ const NavigationContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem 1.5rem 1.5rem;
-  border-bottom: solid 1px black;
   margin-top: 0.75rem;
 `;
 
@@ -69,7 +72,8 @@ const StyledVideo = styled.video`
 const ImageDot = styled.button`
   height: 1.2rem;
   width: 1.2rem;
-  margin: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
   border-radius: 3rem;
   border-color: #dbbe12;
   border: solid 2px #dbbe12;
@@ -85,7 +89,6 @@ const ImageDot = styled.button`
 `;
 
 function SlideShow(props) {
-  console.log(props);
   const initialState = [];
   props.assets.map((asset, index) =>
     initialState.push({
@@ -140,6 +143,11 @@ function SlideShow(props) {
   return (
     <Carousel>
       <ImageWrapper className="imageWrapper">
+        <ButtonWrapper>
+          <Button onClick={handleLeftArrowClick}>
+            <Chevron src={LeftChevron}></Chevron>
+          </Button>
+        </ButtonWrapper>
         {props.assets.map((asset, index) => {
           return asset.type === "photo" ? (
             <StyledImage
@@ -158,11 +166,13 @@ function SlideShow(props) {
             />
           );
         })}
+        <ButtonWrapper>
+          <Button onClick={handleRightArrowClick}>
+            <Chevron src={RightChevron}></Chevron>
+          </Button>
+        </ButtonWrapper>
       </ImageWrapper>
       <NavigationContainer>
-        <Button onClick={handleLeftArrowClick}>
-          <Chevron src={LeftChevron}></Chevron>
-        </Button>
         {props.assets.map((asset, index) => {
           return (
             <ImageDot
@@ -173,9 +183,6 @@ function SlideShow(props) {
             />
           );
         })}
-        <Button onClick={handleRightArrowClick}>
-          <Chevron src={RightChevron}></Chevron>
-        </Button>
       </NavigationContainer>
     </Carousel>
   );

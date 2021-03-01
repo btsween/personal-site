@@ -6,6 +6,7 @@ const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 2rem;
+  border-top: solid 2px #86abb4;
 
   &.dark-schemed {
     background-color: #e8e8e8;
@@ -17,10 +18,12 @@ const CardWrapper = styled.div`
 `;
 
 const CardHeader = styled.div`
+  font-family: Roboto-Medium;
   font-size: 35px;
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-bottom: 1rem;
 `;
 
 const CardBody = styled.div`
@@ -40,7 +43,6 @@ const CardBody = styled.div`
 const BodyText = styled.div`
   text-align: center;
   font-size: 20px;
-  padding-top: 0.75rem;
 `;
 
 function ContentCard(props) {
