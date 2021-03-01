@@ -6,8 +6,6 @@ const TopNavWrapper = styled.div`
   min-height: 5.5rem;
   width: 100%;
   justify-content: space-between;
-  color: rgb(238, 238, 238);
-  background-color: rgb(35, 48, 68);
 
   @media (max-width: 650px) {
     flex-direction: column;
@@ -15,7 +13,7 @@ const TopNavWrapper = styled.div`
 `;
 
 const HeaderLeft = styled.div`
-  margin-left: 5rem;
+  margin-left: 3rem;
   font-size 48px;
   margin-top: auto;
   margin-bottom: auto;
@@ -26,11 +24,16 @@ const HeaderLeft = styled.div`
   }
 `;
 
+const BoldSpan = styled.span`
+  font-family: Roboto-Medium;
+`;
+
 const HeaderRight = styled.div`
   margin-top: auto;
   margin-bottom: auto;
   font-size: 26px;
   display: flex;
+  margin-right: 2rem;
 
   @media (max-width: 650px) {
     margin: auto;
@@ -39,8 +42,8 @@ const HeaderRight = styled.div`
 `;
 
 const HeaderTab = styled.a`
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 
   @media (max-width: 650px) {
     margin: 6px;
@@ -50,10 +53,12 @@ const HeaderTab = styled.a`
 function TopNavigation() {
   return (
     <TopNavWrapper>
-      <HeaderLeft>Bryan Sweeney</HeaderLeft>
+      <HeaderLeft>
+        BRYAN <BoldSpan>SWEENEY</BoldSpan>
+      </HeaderLeft>
       <HeaderRight>
-        <HeaderTab href="#">Projects</HeaderTab>
-        <HeaderTab href="#">About</HeaderTab>
+        <HeaderTab href="#">projects</HeaderTab>
+        <HeaderTab href="#">about</HeaderTab>
       </HeaderRight>
     </TopNavWrapper>
   );

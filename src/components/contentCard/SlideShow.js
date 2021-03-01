@@ -67,18 +67,20 @@ const StyledVideo = styled.video`
 `;
 
 const ImageDot = styled.button`
-  height: 1rem;
-  width: 1rem;
-  background-color: rgba(71, 130, 218, 0.3);
+  height: 1.2rem;
+  width: 1.2rem;
   margin: 6px;
-  border-radius: 8px;
+  border-radius: 3rem;
+  border-color: #dbbe12;
+  border: solid 2px #dbbe12;
 
   &.active {
-    background-color: rgba(71, 130, 218, 0.88);
+    background-color: #dbbe12;
   }
 
   &:hover {
-    background-color: rgba(71, 130, 218, 0.88);
+    background-color: #dbbe12;
+    opacity: 0.8;
   }
 `;
 
