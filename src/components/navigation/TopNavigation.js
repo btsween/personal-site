@@ -3,11 +3,9 @@ import styled from "styled-components";
 
 const TopNavWrapper = styled.div`
   display: flex;
-  min-height: 5.5rem;
+  min-height: 8rem;
   width: 100%;
   justify-content: space-between;
-  color: rgb(238, 238, 238);
-  background-color: rgb(35, 48, 68);
 
   @media (max-width: 650px) {
     flex-direction: column;
@@ -15,45 +13,82 @@ const TopNavWrapper = styled.div`
 `;
 
 const HeaderLeft = styled.div`
-  margin-left: 5rem;
-  font-size 48px;
+  margin-left: 4rem;
   margin-top: auto;
   margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 650px) {
-    margin: auto;
-    font-size: 42px;
+    padding: 0.5rem;
+    margin-left: 0;
+    margin-top: 0;
+    align-items: center;
   }
+`;
+
+const Title = styled.span`
+  font-size: 36px;
+
+  @media (max-width: 650px) {
+    font-size: 34px;
+  }
+`;
+
+const SubTitle = styled.span`
+  color: #86abb4;
+  font-size: 22px;
+`;
+
+const BoldSpan = styled.span`
+  font-family: Roboto-Medium;
 `;
 
 const HeaderRight = styled.div`
   margin-top: auto;
   margin-bottom: auto;
-  font-size: 26px;
+  font-size: 20px;
   display: flex;
+  margin-right: 3rem;
 
   @media (max-width: 650px) {
     margin: auto;
-    font-size: 22px;
+    font-size: 18px;
   }
 `;
 
 const HeaderTab = styled.a`
-  margin-left: 2rem;
-  margin-right: 2rem;
-
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 3px;
   @media (max-width: 650px) {
-    margin: 6px;
+    margin: 4px;
+  }
+
+  &.active {
+    border-bottom: 3px solid #dbbe12;
+  }
+
+  &:hover {
+    border-bottom: 3px solid #dbbe12;
   }
 `;
 
 function TopNavigation() {
   return (
     <TopNavWrapper>
-      <HeaderLeft>Bryan Sweeney</HeaderLeft>
+      <HeaderLeft>
+        <Title>
+          BRYAN <BoldSpan>SWEENEY</BoldSpan>
+        </Title>
+        <SubTitle>software engineer</SubTitle>
+      </HeaderLeft>
       <HeaderRight>
-        <HeaderTab href="#">Projects</HeaderTab>
-        <HeaderTab href="#">About</HeaderTab>
+        <HeaderTab className="active" href="#">
+          projects
+        </HeaderTab>
+        <HeaderTab href="#">about</HeaderTab>
       </HeaderRight>
     </TopNavWrapper>
   );

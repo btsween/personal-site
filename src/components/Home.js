@@ -17,9 +17,11 @@ function Home() {
   return (
     <HomeWrapper>
       <TopNavigation />
-      <PageBody className="temp">
-        {PageContent.projects.map((project) => {
-          return <ContentCard projectData={project} />;
+      <PageBody>
+        {PageContent.projects.map((project, index) => {
+          return (
+            <ContentCard key={index} projectData={project} index={index} />
+          );
         })}
       </PageBody>
       <Footer />
