@@ -20,7 +20,10 @@ const HeaderLeft = styled.div`
   flex-direction: column;
 
   @media (max-width: 650px) {
-    margin: auto;
+    padding: 0.5rem;
+    margin-left: 0;
+    margin-top: 0;
+    align-items: center;
   }
 `;
 
@@ -35,7 +38,6 @@ const Title = styled.span`
 const SubTitle = styled.span`
   color: #86abb4;
   font-size: 22px;
-  margin-left: 6px;
 `;
 
 const BoldSpan = styled.span`
@@ -61,7 +63,11 @@ const HeaderTab = styled.a`
   border-bottom: 3px solid #ffffff;
   padding-bottom: 3px;
   @media (max-width: 650px) {
-    margin: 6px;
+    margin: 4px;
+  }
+
+  &.active {
+    border-bottom: 3px solid #dbbe12;
   }
 
   &:hover {
@@ -79,7 +85,9 @@ function TopNavigation() {
         <SubTitle>software engineer</SubTitle>
       </HeaderLeft>
       <HeaderRight>
-        <HeaderTab href="#">projects</HeaderTab>
+        <HeaderTab className="active" href="#">
+          projects
+        </HeaderTab>
         <HeaderTab href="#">about</HeaderTab>
       </HeaderRight>
     </TopNavWrapper>

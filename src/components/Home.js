@@ -17,7 +17,7 @@ function Home() {
   return (
     <HomeWrapper>
       <TopNavigation />
-      <PageBody className="temp">
+      <PageBody>
         {PageContent.projects.map((project, index) => {
           return (
             <ContentCard key={index} projectData={project} index={index} />

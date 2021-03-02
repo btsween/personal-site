@@ -15,6 +15,7 @@ const FooterIcon = styled.div`
 const TextWrapper = styled.span`
   margin-top: 5px;
   font-size: 20px;
+  margin-right: 1rem;
 `;
 
 const FooterWrapper = styled.div`
