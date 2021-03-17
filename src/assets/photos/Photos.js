@@ -1,4 +1,4 @@
 module.exports = {
-  pic: require("./picture.png"),
+  pic: require("./compound-interest.png"),
   vid: require("./vid.mp4"),
 };
