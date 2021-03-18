@@ -1,24 +1,26 @@
 module.exports = {
   projects: [
     {
-      name: "Bluetooth Beacon Map",
+      name: "Compound Interest Calculator",
       description:
-        "Bluetooth equipped mobile app that allows a user to better understand a venue by using multiple bluetooth beacons showing the user the relative distance to different beacon landmarks",
+        "Caclulate and graph the value of a portfolio according with experimental values for time, rate of return and more, all while learning about the exponential math of compounding interest.",
+      links: {
+        live: "apps.bryansweeney.io",
+        github: "github.com",
+      },
+      tech: ["React", "CSS", "Node.js", "Docker"],
       assets: [
         {
           type: "photo",
           name: "pic",
-        },
-        {
-          type: "video",
-          name: "vid",
         },
       ],
     },
     {
       name: "Bluetooth Beacon Map",
       description:
-        "Bluetooth equipped mobile app that allows a user to better understand a venue by using multiple bluetooth beacons showing the user the relative distance to different beacon landmarks",
+        "Scan QR codes to connect to bluetooth beacons on this mobile app. Get familiar with new venues by viewing beacons organized into regions, sub-regions, and showing relative distance to landmarks.",
+      tech: ["React Native", "Bluetooth Low Energy", "CSS"],
       assets: [
         {
           type: "photo",
@@ -29,7 +31,12 @@ module.exports = {
     {
       name: "Market Watcher",
       description:
-        "Tracks the s/p 500 to look for stocks that are priced unusally, and sends texts to the subscriber to notify of potential buys.",
+        "Automatically track the s&p500 with Python cron-jobs, and analyze current prices against historical performance. Easy alerts sent through text messages.",
+      links: {
+        live: "apps.bryansweeney.io",
+        github: "github.com",
+      },
+      tech: ["Python", "Twilio"],
       assets: [
         {
           type: "photo",
@@ -38,15 +45,14 @@ module.exports = {
       ],
     },
     {
-      name: "Compound Interest Calculator",
+      name: "Personal Website",
       description:
-        "Calculates and graphs the value of a portfolio according to user provided parameters such as time, RoR, and incremental montly investments.",
-      assets: [
-        {
-          type: "photo",
-          name: "pic",
-        },
-      ],
+        "This very site! Built ground up with CSS and React to be fully dynamic.",
+      links: {
+        live: "apps.bryansweeney.io",
+        github: "github.com",
+      },
+      tech: ["React", "CSS", "Node.js", "Docker"],
     },
   ],
 };
