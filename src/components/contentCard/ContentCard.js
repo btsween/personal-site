@@ -6,7 +6,7 @@ const CardWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   border-top: solid 2px #86abb4;
 
   &.dark-schemed {
@@ -30,15 +30,20 @@ const CardHeader = styled.div`
   margin-bottom: 1rem;
 `;
 
-const LinkWrapper = styled.div`
+const RowWrapper = styled.div`
   display: flex;
   align-content: center;
+  justify-content: center;
 `;
 
 const LinksContainer = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 0.25rem;
+
+  &.tech-item {
+    margin-top: 0.5rem;
+  }
 `;
 
 const HeaderText = styled.span`
@@ -52,6 +57,13 @@ const HeaderLinks = styled.a`
   margin-right: 0.5rem;
   color: blue;
   text-decoration: underline solid blue;
+`;
+
+const TechItem = styled.span`
+  font-size: 18px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-family: Roboto-Medium;
 `;
 
 const CardBody = styled.div`
@@ -82,14 +94,14 @@ function ContentCard(props) {
           {props.projectData.links && (
             <LinksContainer>
               {Object.keys(props.projectData.links).map((key, index) => (
-                <LinkWrapper key={index}>
+                <RowWrapper key={index}>
                   <HeaderLinks href={props.projectData.links[key]}>
                     {key}
                   </HeaderLinks>
                   {index < Object.keys(props.projectData.links).length - 1 && (
                     <SeperationDot />
                   )}
-                </LinkWrapper>
+                </RowWrapper>
               ))}
             </LinksContainer>
           )}
@@ -98,6 +110,16 @@ function ContentCard(props) {
           <SlideShow assets={props.projectData.assets} />
         )}
         <BodyText>{props.projectData.description}</BodyText>
+        <RowWrapper>
+          {props.projectData.tech.map((item, index) => (
+            <RowWrapper key={index}>
+              <LinksContainer className="tech-item">
+                <TechItem>{item}</TechItem>
+                {index < props.projectData.tech.length - 1 && <SeperationDot />}
+              </LinksContainer>
+            </RowWrapper>
+          ))}
+        </RowWrapper>
       </CardBody>
     </CardWrapper>
   );
