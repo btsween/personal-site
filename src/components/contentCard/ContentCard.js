@@ -14,13 +14,44 @@ const CardWrapper = styled.div`
   }
 `;
 
+const SeperationDot = styled.div`
+  height: 6px;
+  width: 6px;
+  background-color: black;
+  border-radius: 10px;
+  margin: auto;
+`;
+
 const CardHeader = styled.div`
-  font-family: Roboto-Medium;
-  font-size: 35px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   margin-bottom: 1rem;
+`;
+
+const LinkWrapper = styled.div`
+  display: flex;
+  align-content: center;
+`;
+
+const LinksContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 0.25rem;
+`;
+
+const HeaderText = styled.span`
+  font-family: Roboto-Medium;
+  font-size: 35px;
+`;
+
+const HeaderLinks = styled.a`
+  font-size: 18px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: blue;
+  text-decoration: underline solid blue;
 `;
 
 const CardBody = styled.div`
@@ -45,7 +76,24 @@ function ContentCard(props) {
   return (
     <CardWrapper className={props.index % 2 === 0 ? "dark-schemed" : ""}>
       <CardBody>
-        <CardHeader>{props.projectData.name}</CardHeader>
+        <CardHeader>
+          <HeaderText>{props.projectData.name}</HeaderText>
+
+          {props.projectData.links && (
+            <LinksContainer>
+              {Object.keys(props.projectData.links).map((key, index) => (
+                <LinkWrapper key={index}>
+                  <HeaderLinks href={props.projectData.links[key]}>
+                    {key}
+                  </HeaderLinks>
+                  {index < Object.keys(props.projectData.links).length - 1 && (
+                    <SeperationDot />
+                  )}
+                </LinkWrapper>
+              ))}
+            </LinksContainer>
+          )}
+        </CardHeader>
         {props.projectData.assets && (
           <SlideShow assets={props.projectData.assets} />
         )}
