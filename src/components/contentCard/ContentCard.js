@@ -46,7 +46,9 @@ function ContentCard(props) {
     <CardWrapper className={props.index % 2 === 0 ? "dark-schemed" : ""}>
       <CardBody>
         <CardHeader>{props.projectData.name}</CardHeader>
-        <SlideShow assets={props.projectData.assets} />
+        {props.projectData.assets && (
+          <SlideShow assets={props.projectData.assets} />
+        )}
         <BodyText>{props.projectData.description}</BodyText>
       </CardBody>
     </CardWrapper>
