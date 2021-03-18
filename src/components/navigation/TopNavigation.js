@@ -88,7 +88,7 @@ function TopNavigation() {
         <HeaderTab className="active" href="#">
           projects
         </HeaderTab>
-        <HeaderTab href="#">about</HeaderTab>
+        {/** <HeaderTab href="#">about</HeaderTab>*/}
       </HeaderRight>
     </TopNavWrapper>
   );
