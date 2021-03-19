@@ -5,14 +5,30 @@ module.exports = {
       description:
         "Caclulate and graph the value of a portfolio according with experimental values for time, rate of return and more, all while learning about the exponential math of compounding interest.",
       links: {
-        live: "apps.bryansweeney.io",
-        github: "github.com",
+        live: "https://www.apps.bryansweeney.io",
+        github: "https://github.com/btsween/personal-site",
       },
       tech: ["React", "CSS", "Node.js", "Docker"],
       assets: [
         {
+          type: "video",
+          name: "cic-recording-wide",
+        },
+        {
           type: "photo",
-          name: "pic",
+          name: "cic-top-wide",
+        },
+        {
+          type: "photo",
+          name: "cic-bottom-wide",
+        },
+        {
+          type: "photo",
+          name: "cic-top-narrow",
+        },
+        {
+          type: "photo",
+          name: "cic-bottom-narrow",
         },
       ],
     },
@@ -24,14 +40,14 @@ module.exports = {
       assets: [
         {
           type: "photo",
-          name: "pic",
+          name: "cic-top-wide",
         },
       ],
     },
     {
       name: "Market Watcher",
       description:
-        "Automatically track the s&p500 with Python cron-jobs, and analyze current prices against historical performance. Easy alerts sent through text messages.",
+        "Automatically track the s&p500 with Python cron-jobs, and analyze current prices against historical performance. Opportunities won't pass you by with automated SMS messages through Twilio.",
       links: {
         live: "apps.bryansweeney.io",
         github: "github.com",
@@ -40,7 +56,7 @@ module.exports = {
       assets: [
         {
           type: "photo",
-          name: "pic",
+          name: "cic-top-wide",
         },
       ],
     },
