@@ -6,27 +6,44 @@ import Photos from "../../assets/photos/Photos";
 
 const ImageWrapper = styled.div`
   display: flex;
-  justify-content: center;
   min-height: 34rem;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 1000px) {
+    justify-content: center;
+  }
 `;
 
 const StyledImage = styled.img`
+  object-fit: contain;
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
   display: none;
-  min-height: 34rem;
-  object-fit: none;
+  max-height: 34rem;
+  max-width: 80%;
 
   &.active {
     display: flex;
-    min-height: auto;
+  }
+
+  @media (max-width: 1000px) {
+    max-width: 100%;
   }
 `;
 
 const Carousel = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 95%;
+  max-width: 1200px;
+  // TODO: max-width: some reasonable value ...
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 const Chevron = styled.img`
@@ -39,10 +56,9 @@ const ButtonWrapperDesktop = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 4rem;
   display: none;
 
-  @media (min-width: 650px) {
+  @media (min-width: 1000px) {
     display: flex;
   }
 `;
@@ -50,7 +66,7 @@ const ButtonWrapperDesktop = styled.div`
 const ButtonWrapperMobile = styled.div`
   display: none;
 
-  @media (max-width: 650px) {
+  @media (max-width: 1000px) {
     display: flex;
   }
 `;
@@ -74,7 +90,13 @@ const NavigationContainer = styled.div`
 
 const StyledVideo = styled.video`
   display: none;
-  min-height: 30rem;
+  max-height: 34rem;
+  max-width: 90%;
+  object-fit: contain;
+
+  @media (max-width: 1000px) {
+    max-width: 100%;
+  }
 
   &.active {
     display: flex;

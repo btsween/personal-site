@@ -70,8 +70,7 @@ const CardBody = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  width: 50rem;
-  max-width: 75vw;
+  align-items: center;
 
   @media (max-width: 650px) {
     max-width: inherit;
@@ -82,6 +81,8 @@ const CardBody = styled.div`
 const BodyText = styled.div`
   text-align: center;
   font-size: 20px;
+  width: 75%;
+  max-width: 850px;
 `;
 
 function ContentCard(props) {
@@ -90,7 +91,6 @@ function ContentCard(props) {
       <CardBody>
         <CardHeader>
           <HeaderText>{props.projectData.name}</HeaderText>
-
           {props.projectData.links && (
             <LinksContainer>
               {Object.keys(props.projectData.links).map((key, index) => (
