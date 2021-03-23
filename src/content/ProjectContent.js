@@ -36,7 +36,7 @@ module.exports = {
       name: "Bluetooth Beacon Map",
       description:
         "Scan QR codes to connect to bluetooth beacons on this mobile app. Get familiar with new venues by viewing beacons organized into regions, sub-regions, and showing relative distance to landmarks.",
-      tech: ["React Native", "Bluetooth Low Energy", "CSS"],
+      tech: ["React Native", "Bluetooth Low Energy"],
       assets: [
         {
           type: "photo",
@@ -45,18 +45,17 @@ module.exports = {
       ],
     },
     {
-      name: "Market Watcher",
+      name: "StockWatch",
       description:
-        "Automatically track the s&p500 with Python cron-jobs, and analyze current prices against historical performance. Opportunities won't pass you by with automated SMS messages through Twilio.",
+        "Automatically track the s&p500 with Python and yfinance to look for market opportunites. You won't miss your chance with automated SMS messages through Twilio.",
       links: {
-        live: "apps.bryansweeney.io",
-        github: "github.com",
+        github: "https://github.com/btsween/stock-watch",
       },
-      tech: ["Python", "Twilio"],
+      tech: ["Python", "Twilio", "Cron"],
       assets: [
         {
           type: "photo",
-          name: "cic-top-wide",
+          name: "stock-watch-text",
         },
       ],
     },

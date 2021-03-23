@@ -6,4 +6,5 @@ module.exports = {
   "cic-bottom-wide": require("./cic-bottom-wide.png"),
   "cic-top-narrow": require("./cic-top-narrow.png"),
   "cic-bottom-narrow": require("./cic-bottom-narrow.png"),
+  "stock-watch-text": require("./stock-watch-text.png"),
 };
