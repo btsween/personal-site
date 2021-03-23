@@ -4,8 +4,6 @@ const app = express();
 
 const PORT = process.env.PORT || "3000";
 
-console.log(process.env.NODE_ENV);
-
 if (process.env.NODE_ENV === "production") {
   app.use((req, res, next) => {
     if (req.header("x-forwarded-proto") !== "https") {
