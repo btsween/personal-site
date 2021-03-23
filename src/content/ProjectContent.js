@@ -39,8 +39,24 @@ module.exports = {
       tech: ["React Native", "Bluetooth Low Energy"],
       assets: [
         {
+          type: "video",
+          name: "ble-show-beacon",
+        },
+        {
           type: "photo",
-          name: "cic-top-wide",
+          name: "ble-region-screen",
+        },
+        {
+          type: "photo",
+          name: "ble-subregion-screen",
+        },
+        {
+          type: "photo",
+          name: "ble-beacon-screen",
+        },
+        {
+          type: "video",
+          name: "ble-add-beacon",
         },
       ],
     },
