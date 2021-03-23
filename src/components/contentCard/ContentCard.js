@@ -87,7 +87,10 @@ const BodyText = styled.div`
 
 function ContentCard(props) {
   return (
-    <CardWrapper className={props.index % 2 === 0 ? "dark-schemed" : ""}>
+    <CardWrapper
+      id={props.projectData.id}
+      className={props.index % 2 === 0 ? "dark-schemed" : ""}
+    >
       <CardBody>
         <CardHeader>
           <HeaderText>{props.projectData.name}</HeaderText>

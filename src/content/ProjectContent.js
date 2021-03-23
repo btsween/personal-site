@@ -31,6 +31,7 @@ module.exports = {
           name: "cic-bottom-narrow",
         },
       ],
+      id: "compound-interest",
     },
     {
       name: "Bluetooth Beacon Map",
@@ -59,6 +60,7 @@ module.exports = {
           name: "ble-add-beacon",
         },
       ],
+      id: "bluetooth",
     },
     {
       name: "StockWatch",
@@ -74,6 +76,7 @@ module.exports = {
           name: "stock-watch-text",
         },
       ],
+      id: "stock-watch",
     },
     {
       name: "Personal Website",
@@ -84,6 +87,7 @@ module.exports = {
         github: "github.com",
       },
       tech: ["React", "CSS", "Node.js", "Docker"],
+      id: "personal-website",
     },
   ],
 };
