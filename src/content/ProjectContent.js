@@ -5,7 +5,7 @@ module.exports = {
       description:
         "Caclulate and graph the value of a portfolio according with experimental values for time, rate of return and more, all while learning about the exponential math of compounding interest.",
       links: {
-        live: "https://www.apps.bryansweeney.io",
+        deployed: "https://www.apps.bryansweeney.io",
         github: "https://github.com/btsween/personal-site",
       },
       tech: ["React", "CSS", "Node.js", "Docker"],
@@ -83,8 +83,7 @@ module.exports = {
       description:
         "This very site! Built ground up with CSS and React to be fully dynamic.",
       links: {
-        live: "apps.bryansweeney.io",
-        github: "github.com",
+        github: "https://github.com/btsween/personal-site",
       },
       tech: ["React", "CSS", "Node.js", "Docker"],
       id: "personal-website",
