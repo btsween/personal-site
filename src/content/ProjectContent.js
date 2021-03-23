@@ -5,7 +5,7 @@ module.exports = {
       description:
         "Caclulate and graph the value of a portfolio according with experimental values for time, rate of return and more, all while learning about the exponential math of compounding interest.",
       links: {
-        live: "https://www.apps.bryansweeney.io",
+        deployed: "https://www.apps.bryansweeney.io",
         github: "https://github.com/btsween/personal-site",
       },
       tech: ["React", "CSS", "Node.js", "Docker"],
@@ -31,6 +31,7 @@ module.exports = {
           name: "cic-bottom-narrow",
         },
       ],
+      id: "compound-interest",
     },
     {
       name: "Bluetooth Beacon Map",
@@ -59,6 +60,7 @@ module.exports = {
           name: "ble-add-beacon",
         },
       ],
+      id: "bluetooth",
     },
     {
       name: "StockWatch",
@@ -74,16 +76,17 @@ module.exports = {
           name: "stock-watch-text",
         },
       ],
+      id: "stock-watch",
     },
     {
       name: "Personal Website",
       description:
         "This very site! Built ground up with CSS and React to be fully dynamic.",
       links: {
-        live: "apps.bryansweeney.io",
-        github: "github.com",
+        github: "https://github.com/btsween/personal-site",
       },
       tech: ["React", "CSS", "Node.js", "Docker"],
+      id: "personal-website",
     },
   ],
 };
