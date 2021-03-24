@@ -6,7 +6,7 @@ module.exports = {
         "Caclulate and graph the value of a portfolio according with experimental values for time, rate of return and more, all while learning about the exponential math of compounding interest.",
       links: {
         deployed: "https://www.apps.bryansweeney.io",
-        github: "https://github.com/btsween/personal-site",
+        github: "https://github.com/btsween/compound-interest-calculator",
       },
       tech: ["React", "CSS", "Node.js", "Docker"],
       assets: [
